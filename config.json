@@ -10,8 +10,20 @@
   "phone": "",
   "photo": "",
   "schedule": [
-    {"time": "18:00", "title": "Kahramanlarla buluşma", "detail": "Karşılama & bol bol fotoğraf"},
-    {"time": "19:00", "title": "Bir dilek tut!", "detail": "Pasta, mumlar ve büyük bir alkış"},
-    {"time": "19:30", "title": "Eğlence zamanı", "detail": "Oyunlar, müzik ve süper anılar"}
+    {
+      "time": "18:00",
+      "title": "Karşılama",
+      "detail": ""
+    },
+    {
+      "time": "19:00",
+      "title": "Pasta Töreni",
+      "detail": ""
+    },
+    {
+      "time": "19:30",
+      "title": "Eğlence Zamanı",
+      "detail": ""
+    }
   ]
 }

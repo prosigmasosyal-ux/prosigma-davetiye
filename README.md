@@ -12,8 +12,10 @@ Yönetici sırları Pages secrets içindedir, kaynakta bulunmaz. Yerel giriş do
 
 Bilgiler config.json'dan yüklenir. Editör #v bağlantıları üretir; bu kişisel bağlantılar sabittir, düzenlemeden sonra yeni bağlantı paylaşılır. Katılım kayıtları bu tek Ali Miran etkinliğine aittir.
 
-Yaş, tarih ve mekân kullanıcı tarafından henüz teyit edilmemiş referans örnekleridir. Kayıt açmadan önce kontrol edin.
+Yaş, tarih ve mekân kullanıcının paylaştığı referans konuşmadaki bilgilerle ayarlanmıştır; config.json ve editörden değiştirilebilir.
 
 Geliştirme: node build.mjs; node tests/api.test.mjs. Yayın: wrangler pages deploy dist --project-name alimiran --branch main.
 
 Tabler Icons (MIT), lisans assets/icons/LICENSE. Görseller kullanıcı fotoğrafları ve referans yönlendirmesiyle üretilmiş çizgi roman dekorlarıdır.
+
+Yönetim panelinde arama sonucu listesi yazdırılabilir / tarayıcıdan PDF kaydedilebilir ve UTF-8 Excel uyumlu CSV indirilebilir. CSV formül başlangıçlarını etkisizleştirir. Barlow Condensed fontları yerel sunulur; lisans assets/fonts/LICENSE.
