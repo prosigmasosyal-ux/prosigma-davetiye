@@ -12,4 +12,8 @@ Statik, mobil uyumlu, GitHub Pages üzerinde çalışan davetiye. Sunucu hesabı
 - Takvim dosyası Türkiye saati (UTC+3), üç saatlik etkinlik olarak üretilir.
 - Varsayılan isim Ali Miran. Kullanıcı sadece isim verdiği için 8 yaş, 17 Ekim 2026 18.00, Escape Cafe/Antares AVM bilgileri referanstan alınmış düzenlenebilir örnektir. Gerçek bilgiler paylaşmadan önce kontrol edilmelidir.
 
-Görseller: bu proje için üretilmiş çizgi roman şehir arka planı, CSS yıldız/halftone ve özgün SVG simge. Referanstaki çocuğun fotoğrafı kullanılmadı. Dış font/CDN/script ve analitik yok. Fotoğraf eklenirse yalnızca verilen HTTPS adresinden yüklenir.
+Sayfa yapısı: fotoğraflı kapak, parti detayları/anılar, QR kodlu katılım ve etkinlik programı. Masaüstünde dört panel yan yana, telefonda sırayla alt alta görünür.
+
+Görseller: üretilmiş çizgi roman şehir arka planı ve kullanıcının sağladığı Ali Miran fotoğrafları. Kapak için fotoğrafın arka planı kaldırıldı. Dış font/CDN/analitik yok.
+
+QR: qrcode-generator 2.0.4 (Kazuhiko Arase, MIT), yerel assets/qrcode.js içinde lisans bildirimi korunmuştur. Numara varsa WhatsApp, yoksa davetiye bağlantısı kodlanır.
