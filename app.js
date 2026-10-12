@@ -8,7 +8,7 @@ function render(c){config=c;$('guest-brand').textContent='✦ '+c.name.toLocaleU
 async function loadInvitation(){try{const hash=location.hash.match(/^#v=(.+)$/);render(hash?Invite.decode(hash[1]):Invite.normalize(await(await fetch('config.json',{cache:'no-cache'})).json()));}catch(e){toast('Davetiye yüklenemedi: '+e.message);$('rsvp-button').disabled=true;}}
 loadInvitation();window.addEventListener('hashchange',loadInvitation);
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}));
-$('share').onclick=async()=>{if(!config)return;const url=location.href;try{if(navigator.share)await navigator.share({title:document.title,text:'Süper bir doğum gününe davetlisin! 🎉',url});else await copy(url);}catch(e){if(e.name!=='AbortError')await copy(url);}};
+$('share').onclick=async()=>{if(!config)return;const shareUrl=new URL(location.href);shareUrl.searchParams.set("v","kapak2");const url=shareUrl.href;try{if(navigator.share)await navigator.share({title:document.title,text:'Süper bir doğum gününe davetlisin! 🎉',url});else await copy(url);}catch(e){if(e.name!=='AbortError')await copy(url);}};
 $('calendar').onclick=()=>{if(config)download(Invite.calendar(config),'dogum-gunu.ics','text/calendar;charset=utf-8')};
 $('rsvp-button').onclick=()=>{location.href='katilim.html';};
 
