@@ -11,3 +11,11 @@
 
 .cover-photo{background:radial-gradient(ellipse at 18% 40%,#ec052dcc 0,transparent 65%),url(assets/hero.jpg) center bottom/cover}.cover-top{background:linear-gradient(#04132be8,#04132b66);padding-top:10px}.cover-top p{font-family:Arial,sans-serif;font-size:13px;font-weight:900}.exact-burst{width:148px;right:-1px;bottom:0}.hero-facts{padding-top:28px;padding-bottom:25px}
 .age{transform:scaleX(1.28)}.cover-photo{background:none;isolation:isolate}.cover-photo:before{content:'';position:absolute;inset:-25px 0 0;z-index:-1;background:radial-gradient(ellipse at 18% 40%,#ec052dcc 0,transparent 65%),url(assets/hero.jpg) center bottom/cover;mask-image:linear-gradient(transparent,black 12%)}
+
+.invitation-panels{padding:0;gap:0}.panel{border:0;border-radius:0;box-shadow:none}.panel-content{left:0}body{overflow-x:hidden}
+
+.cover-photo .reference-hero{width:128px;left:-4px;bottom:0;z-index:4}.cover-photo .exact-burst{z-index:6}
+
+#hero-photo{object-position:center 18%}.cover-photo{height:410px}
+/* One continuous canvas; decorative layers blend into the same backdrop. */
+body{background:#04132b url(assets/cover-background.jpg) center top/cover fixed}.top,footer{color:white;background:#04132bcc}.share{background:#ffffff18}.panel,.panel-content,.cover .panel-content{background:transparent}.cover-top{background:transparent}.cover-photo:before{display:none}.cover-photo{background:transparent}#hero-photo{mask-image:linear-gradient(to bottom,transparent,black 7%,black 89%,transparent),linear-gradient(to right,transparent,black 8%,black 92%,transparent);mask-composite:intersect}.art-title img,.reference-memories,.reference-waiting,.closing-art img,.exact-city img{mask-image:linear-gradient(to bottom,transparent,black 3%,black 97%,transparent)}.reference-memories{margin-top:-8px}.reference-waiting{margin-top:8px}.cover .hero-facts{margin-top:-26px}.program-title{margin-bottom:-22px}
