@@ -1,19 +1,19 @@
-# PROSİGMA — Ali Miran dijital davetiyesi
+# Ali Miran davetiyesi
 
-Statik, mobil uyumlu, GitHub Pages üzerinde çalışan davetiye. Sunucu hesabı veya ücretli servis gerektirmez.
+Canlı adres: https://alimiran.aktar-drive.workers.dev/
+Yönetim: https://alimiran.aktar-drive.workers.dev/yonetim.html
+Düzenleyici: https://alimiran.aktar-drive.workers.dev/editor.html
 
-- `index.html`: davetlilere paylaşılacak sayfa; ana bilgiler `config.json` dosyasından gelir.
-- `editor.html`: isim, yaş, tarih, Türkiye saati, mekân, program, mesaj, fotoğraf URL’si ve WhatsApp düzenleme ekranı.
-- Düzenleyici yeni, kendi verisini taşıyan `#v=…` bağlantısı oluşturur. Eski kişisel bağlantılar değişmez. Yeni bilgileri paylaşmak için yeni bağlantıyı gönderin.
-- Ana kısa adresi aynı tutarak değiştirmek için GitHub'da `config.json` güncellenir. Editör bu dosyayı indirebilir; GitHub hesabına erişim anahtarı tarayıcıda tutulmaz.
-- Taslak yalnızca kullanılan tarayıcının localStorage alanında kalır. Düzenleyici herkese açık olsa da başkaları sizin GitHub dosyanızı değiştiremez; kendi linklerini oluşturabilir.
-- Bilgiler link içinde şifrelenmeden bulunur; gizli/veri kasası değildir. Noindex talebi gizlilik veya erişim kontrolü değildir.
-- Katılım WhatsApp’a hazır mesaj açar; mesajı kullanıcı gönderir. Sunucuda davetli listesi tutulmaz. Numara boşsa herhangi bir yere gönderim yapılmaz.
-- Takvim dosyası Türkiye saati (UTC+3), üç saatlik etkinlik olarak üretilir.
-- Varsayılan isim Ali Miran. Kullanıcı sadece isim verdiği için 8 yaş, 17 Ekim 2026 18.00, Escape Cafe/Antares AVM bilgileri referanstan alınmış düzenlenebilir örnektir. Gerçek bilgiler paylaşmadan önce kontrol edilmelidir.
+Cloudflare Pages + D1. Kaynak GitHub'da, kayıtlar yalnızca D1'da bulunur. GitHub Pages eski adresi yeni adrese yönlendirir.
 
-Sayfa yapısı: fotoğraflı kapak, parti detayları/anılar, QR kodlu katılım ve etkinlik programı. Masaüstünde dört panel yan yana, telefonda sırayla alt alta görünür.
+Katılım formunda çocuk adı, anne adı, Türkiye cep telefonu ve veli onayı zorunludur. Sunucu doğrulaması, sorgu parametreleme, aynı çocuk/telefon için tekrar kayıt engeli, IP özetiyle istek sınırlama, yönetici şifresi özeti ve HttpOnly/Secure/SameSite oturum çerezi bulunur. Telefon doğrulama SMS'i yoktur; numara biçimi kontrol edilir. QR kullanılmaz.
 
-Görseller: üretilmiş çizgi roman şehir arka planı ve kullanıcının sağladığı Ali Miran fotoğrafları. Kapak için fotoğrafın arka planı kaldırıldı. Dış font/CDN/analitik yok.
+Yönetici sırları Pages secrets içindedir, kaynakta bulunmaz. Yerel giriş dosyası repo dışında saklanır. Yayına yalnızca build.mjs izin listesindeki dosyalar çıkar; şema ve testler statik sunulmaz. D1 kayıtları etkinlik sonrasında sahibi tarafından silinmelidir.
 
-QR: qrcode-generator 2.0.4 (Kazuhiko Arase, MIT), yerel assets/qrcode.js içinde lisans bildirimi korunmuştur. Numara varsa WhatsApp, yoksa davetiye bağlantısı kodlanır.
+Bilgiler config.json'dan yüklenir. Editör #v bağlantıları üretir; bu kişisel bağlantılar sabittir, düzenlemeden sonra yeni bağlantı paylaşılır. Katılım kayıtları bu tek Ali Miran etkinliğine aittir.
+
+Yaş, tarih ve mekân kullanıcı tarafından henüz teyit edilmemiş referans örnekleridir. Kayıt açmadan önce kontrol edin.
+
+Geliştirme: node build.mjs; node tests/api.test.mjs. Yayın: wrangler pages deploy dist --project-name alimiran --branch main.
+
+Tabler Icons (MIT), lisans assets/icons/LICENSE. Görseller kullanıcı fotoğrafları ve referans yönlendirmesiyle üretilmiş çizgi roman dekorlarıdır.

@@ -1,3 +1,4 @@
+if(location.hostname.endsWith('.github.io'))location.replace('https://alimiran.aktar-drive.workers.dev/editor.html'+location.hash);
 'use strict';const form=document.getElementById('edit-form'),$=id=>document.getElementById(id);let timer;
 function values(){const c=Object.fromEntries(new FormData(form));c.schedule=c.schedule.split('\n').filter(x=>x.trim()).map(line=>{const [time,title,...detail]=line.split('|').map(x=>x.trim());return{time,title,detail:detail.join(' | ')}});return Invite.normalize(c);}
 function fill(c){c=Invite.normalize(c);for(const [key,v] of Object.entries(c))if(form.elements[key])form.elements[key].value=key==='schedule'?v.map(s=>[s.time,s.title,s.detail].join(' | ')).join('\n'):v;preview();}
